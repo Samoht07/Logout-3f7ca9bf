@@ -1,32 +1,31 @@
 <html>
 <head>
-<title>PHP insertion</title>
-<link href="css/insert.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="Style.css">
+    <title>PHP insertion</title>
+    <link href="css/insert.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <body>
-<div class="maindiv">
-<!--HTML Form -->
-<div class="form_div">
-<div class="title">
-<div class="nav">
-    <ul class="navi">
-        <li class="nav"> <a href="index.php" title="terug">terug</a></li>
-    </ul>
-</div>
-<h2>Insert Data In Database Using PHP.</h2>
-</div>
-<form action="submit.php" method="post">
-<!-- Method can be set as POST for hiding values in URL-->
-<h2>Form</h2>
-<label>Naam:</label><br>
-<input class="input" name="naam" type="text" value=""><br>
-<label>Vraag:</label><br>
-<input class="input" name="vraag" type="text" value=""><br>
-<input class="submit" name="submit" type="submit" value="Insert">
-</form>
-</div>
-</div>
+    <div class="maindiv">
+    <div class="form_div">
+    <div class="title">
+    <div class="nav">
+        <ul class="navi">
+            <li class="nav"> <a href="index.php" title="terug">terug</a></li>
+        </ul>
+    </div>
+        <a href='logout.php'>Click here to log out</a>
+        <h2>Insert Data In Database Using PHP.</h2>
+        </div>
+            <form action="submit.php" method="post">
+                <h2>Form</h2>
+                <label>Naam:</label><br>
+                <input class="input" name="naam" type="text" value=""><br>
+                <label>Vraag:</label><br>
+                <input class="input" name="vraag" type="text" value=""><br>
+                <input class="submit" name="submit" type="submit" value="Insert">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
 
@@ -50,15 +49,15 @@ try {
      throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-if(isset($_POST['submit'])){ // Fetching variables of the form which travels in URL
-$naam = $_POST['naam'];
-$vraag = $_POST['vraag'];
+if(isset($_POST['submit'])){ 
+    $naam = $_POST['naam'];
+    $vraag = $_POST['vraag'];
 
-if ($naam != '' || $vraag != ''){
-    $query = $pdo->query("insert into vragen(naam, vraag) values ('$naam', '$vraag')");
-} else {
-    echo "<p>Insertion Failed <br/> Some Fields are Blank....!!</p>";
-}
+    if ($naam != '' || $vraag != ''){
+        $query = $pdo->query("insert into vragen(naam, vraag) values ('$naam', '$vraag')");
+    } else {
+        echo "<p>Insertion Failed <br/> Some Fields are Blank....!!</p>";
+    }
 }
 
 ?>

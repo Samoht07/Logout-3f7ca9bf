@@ -18,42 +18,27 @@ try {
      throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-
-
 ?>
-
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
 <div id="form">
-
-<h1 class="welkom">welkom</h1>
-
-<div class="nav">
-    <ul class="navi">
-        <li class="nav"> <a href="inlog.php" title="naar het inlog scherm">inlog</a></li>
-        <li class="nav"> <a href="aanmelden.php" title="naar het aanmeld scherm">aanmelden</a></li>
-        <li class="nav"> <a href="submit.php" title="naar het submit scherm">submit</a></li>
-    </ul>
+    <h1 class="welkom">welkom</h1>
+    <div class="nav">
+        <ul class="navi">
+            <li class="nav"> <a href="inlog.php" title="naar het inlog scherm">inlog</a></li>
+            <li class="nav"> <a href="aanmelden.php" title="naar het aanmeld scherm">aanmelden</a></li>
+            <li class="nav"> <a href="submit.php" title="naar het submit scherm">submit</a></li>
+        </ul>
+    </div>
 </div>
-
-</div>
-    
-
-
-
-<!-- <form action="index.php" method="GET" name="form">
-    <input type="text" name="username">
-    <input type="text" name="password">
-    <input type="submit" name="submit">
-</form> -->
 
 </body>
 </html>

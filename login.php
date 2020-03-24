@@ -18,7 +18,6 @@
 </div>
 <div id="form">
 <form action="inlog.php" method="post">
-<!-- Method can be set as POST for hiding values in URL-->
 <label>naam:</label><br>
 <input class="input" name="username" type="text" value=""><br>
 <label>wachtwoord:</label><br>
@@ -51,17 +50,17 @@ try {
      throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-if(isset($_POST['submit'])){ // Fetching variables of the form which travels in URL
-$naam = $_POST['username'];
-$wachtwoord = $_POST['password'];
+if(isset($_POST['submit'])){ 
+    $naam = $_POST['username'];
+    $wachtwoord = $_POST['password'];
 
-if ($naam == 'admin' && $wachtwoord == 'admin'){
-    header('location: display.php');
-} elseif ($naam == ''|| $wachtwoord == '') {
-    echo "<p>Insertion Failed <br/> Some Fields are Blank....!!</p>";
-} else {
-    header('location: submit.php');
-}
+    if ($naam == 'admin' && $wachtwoord == 'admin'){
+        header('location: display.php');
+    } elseif ($naam == ''|| $wachtwoord == '') {
+        echo "<p>Insertion Failed <br/> Some Fields are Blank....!!</p>";
+    } else {
+        header('location: submit.php');
+    }
 }
 
 ?>

@@ -6,12 +6,7 @@ body {
     margin: 50px;
 }
 
-label {
-    color: white;
-}
-
 h1 {
-    color: white;
     width: 100%;
     text-align: center;
     margin: 0px;
@@ -20,7 +15,6 @@ h1 {
 }
 
 h2 {
-    color: white;
     width: 100%;
     text-align: center;
     margin: 0px;
@@ -46,10 +40,6 @@ h2 {
 
 a:hover {
     background-color: darkblue;
-}
-
-a {
-    color: white;
 }
 
 form {

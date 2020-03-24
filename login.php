@@ -50,11 +50,11 @@ try {
      throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-if(isset($_POST['submit'])){ 
+if(isset($_POST['submit'])) { 
     $naam = $_POST['username'];
     $wachtwoord = $_POST['password'];
 
-    if ($naam == 'admin' && $wachtwoord == 'admin'){
+    if ($naam == 'admin' && $wachtwoord == 'admin') {
         header('location: display.php');
     } elseif ($naam == ''|| $wachtwoord == '') {
         echo "<p>Insertion Failed <br/> Some Fields are Blank....!!</p>";

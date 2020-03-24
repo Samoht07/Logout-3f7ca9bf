@@ -38,12 +38,12 @@ try {
 
 $stmt = $pdo->query('SELECT * FROM vragen');
 while ($row = $stmt->fetch()) {
-        ?>
+    ?>
     <tr>
         <td><?= $row['naam']?></td>
         <td><?= $row['vraag']?></td>
     </tr>
         <?php
-    }
-    ?>
+}
+?>
 </table>
